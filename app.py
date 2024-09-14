@@ -6,10 +6,19 @@ import os
 import tensorflow as tf
 from PIL import Image
 import cv2
+from transformers import AutoModel
+from huggingface_hub import hf_hub_download
 
 
 # Loading trained model
-model = load_model('my_model1.keras')  
+
+os.environ["KERAS_BACKEND"] = "tensorflow"
+import keras
+model_path = hf_hub_download(repo_id="avimittal30/emotion_detector", filename="ed_model1.keras")
+model = keras.models.load_model(model_path)
+
+# model=load_model('my_model.keras')
+
 app = Flask(__name__)
 
 
@@ -46,4 +55,5 @@ def predict():
     return render_template('result.html', emotion=predicted_emotion, image_file=filepath)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host="0.0.0.0", port=8080)
