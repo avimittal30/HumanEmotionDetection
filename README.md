@@ -8,11 +8,13 @@ The application is created using flask framework and deployed on AWS EC2 instanc
 
 I tried using TransferNet approach and Finetuning approach. With Transfernet, the model accuracy was only 63% while it increased to 80% with a finetuned model
 
-![alt text](TransferLearning.png)
-
 ## Evaluation Metrics
 
 Loss: 0.5
 Accuracy: 80%
 Top_k_accuracy: 93%
+
+With transfer learning, this image was incorrecly labeled as Sad
+
+![Incorrect labeling with transfer learning](TransferLearning.png)
 
