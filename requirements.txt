@@ -1,0 +1,12 @@
+tensorflow
+numpy
+matplotlib
+scikit-learn
+opencv-python-headless
+seaborn
+Pillow
+albumentations
+tensorflow-datasets
+flask
+
+

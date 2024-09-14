@@ -1,0 +1,80 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #00509d;
+}
+
+.upload-section {
+    margin-bottom: 20px;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: #0078D7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #00509d;
+}
+
+#file-upload {
+    display: none;
+}
+
+.image-preview {
+    margin: 20px 0;
+}
+
+.image-preview img {
+    max-width: 100%;
+    border: 2px solid #0078D7;
+    border-radius: 8px;
+    height: auto;
+}
+
+.result-section {
+    margin-top: 20px;
+}
+
+.result-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #00509d;
+}
+
+.result-section p {
+    font-size: 16px;
+    color: #666;
+}

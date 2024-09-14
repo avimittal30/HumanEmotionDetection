@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection Result</h1>
+
+    <div class="result">
+        <p>Predicted Emotion: <strong>{{ emotion }}</strong></p>
+    </div>
+
+    <div>
+        <img src="{{ image_file }}" alt="Uploaded Image">
+    </div>
+
+    <a href="/" class="back-button">Try Again</a>
+</body>
+</html>

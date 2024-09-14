@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Detection from Image</h1>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <!-- Form to upload the image -->
+            <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+                <label for="file-upload" class="upload-btn">Upload Image</label>
+                <input type="file" id="file-upload" name="image" accept="image/*" onchange="previewImage(event)">
+                <button type="submit">Submit for Emotion Detection</button>
+            </form>
+        </div>
+
+        <!-- Image Preview -->
+        <div class="image-preview" id="image-preview">
+            <img id="output" alt="Your Image Preview Will Appear Here" />
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section">
+            <h2>Detected Emotion:</h2>
+            <p id="emotion-result">Upload an image to see the result.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to preview the selected image before upload
+        function previewImage(event) {
+            const output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = () => {
+                URL.revokeObjectURL(output.src); // Free memory after image is loaded
+            };
+            // Reset the motion detection result when a new image is selected
+            const emotionResult = document.getElementById('emotion-result');
+            emotionResult.innerText = "Image selected, ready for detection.";
+        }
+    </script>
+</body>
+</html>
