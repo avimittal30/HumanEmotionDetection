@@ -14,11 +14,13 @@ Loss: 0.5
 Accuracy: 80%
 Top_k_accuracy: 93%
 
-Example:how finetuning improved the model performance
+# Example:how finetuning improved the model performance
+
 With transfer learning, this image was incorrecly labeled as Sad
 
 ![Incorrect labeling with transfer learning](TransferLearning.png)
 
 After funtuning, this image was correctly labeled as happy
+
 ![Correct labeling with finetuned model](Finetuning.png)
 
