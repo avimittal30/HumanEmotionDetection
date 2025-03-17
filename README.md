@@ -20,7 +20,7 @@ With transfer learning, this image was incorrecly labeled as Sad
 
 ![Incorrect labeling with transfer learning](TransferLearning.png)
 
-After funtuning, this image was correctly labeled as happy
+After finetuning, this image was correctly labeled as happy
 
 ![Correct labeling with finetuned model](Finetuning.png)
 
