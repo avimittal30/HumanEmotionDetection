@@ -1,3 +1,6 @@
+For Demo: please visit:
+https://huggingface.co/spaces/avimittal30/Human-Emotion-Detection
+
 ## Human Emotion Detection
 A full fledged application that detects human emotion from an Image.
 In this project, I have finetuned Efficient model to achieve 80% accuracy on the validation dataset.
